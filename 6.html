@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class calificacion{
+            constructor(fisica, quimica, matematicas, biologia, informatica){
+                this.fisica = fisica;
+                this.quimica = quimica;
+                this.matematicas = matematicas;
+                this.biologia = biologia;
+                this.informatica = informatica;
+            }
+
+            calcular_notas(){
+                let sumar_notas = this.fisica + this.quimica  + this.matematicas + this.biologia + this.informatica;
+                let total = sumar_notas / 5;
+
+                if (total >= 0 && total <= 5.99) {
+                    document.write("tu calificacion es de: " + total + " lo siento, has perdido.");
+                } else if (total >= 6 && total <=8) {
+                    document.write("tu calificacion es de: " + total + " Bien hecho, tiene una calificacion promedio.");
+                } else if (total >= 8) {
+                    document.write("tu calificacion es de: " + total + " Excelente.");
+                }
+            }
+        }
+
+        let objeto_notas = new calificacion(parseFloat(prompt("Fisica: ")), 
+                            parseFloat(prompt("Quimica: ")),
+                            parseFloat(prompt("Matematicas: ")),
+                            parseFloat(prompt("Biologia: ")),
+                            parseFloat(prompt("Informatica: ")));
+        objeto_notas.calcular_notas();
+    </script>
+</body>
+</html>

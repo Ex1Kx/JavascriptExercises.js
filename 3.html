@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class lavadoras{
+            constructor(opcion, cantidad_lavadoras){
+                this.opcion = opcion;
+                this.cantidad_lavadoras = cantidad_lavadoras;
+                this.lavadora_grande = 4000;
+                this.lavadora_pequeña = 3000;
+            }
+
+            calcular_lavadoras(){
+                if (this.cantidad_lavadoras == 3) {
+                    if (this.opcion == "1") {
+                        let horaG = parseInt(prompt("Cuantas horas vas a utilizar la lavadora?: "));
+                        let total = horaG * this.lavadora_grande;
+                        let costo = total * this.cantidad_lavadoras;
+                        let descuento = costo * 0.03; 
+                        let vTotal = costo - descuento;
+                        alert("El costo es de: " + vTotal + " ,con un descuento de 3%");
+                    } else if (this.opcion == "2") {
+                        let horaP = parseInt(prompt("Cuantas horas vas a utilizar la lavadora?: "));
+                        let totalP = horaP * this.lavadora_pequeña;
+                        let costoP = totalP * this.cantidad_lavadoras;
+                        let descuentoP = costoP * 0.03;
+                        let vtotalP = costoP - descuentoP;
+                        alert("El costo de la pequeña es: " + vtotalP + " ,con un descuento del 3%");
+                    }
+                } else if (this.cantidad_lavadoras != 3) {
+                    if (this.opcion == "1") {
+                        let horaG = parseInt(prompt("Cuantas horas vas a utilizar la lavadora?: "));
+                        let total = horaG * this.lavadora_grande;
+                        let valor = total * this.cantidad_lavadoras;
+                        alert("El costo es de: " + valor);
+                    } else if (this.opcion == "2") {
+                        let horaP = parseInt(prompt("Cuantas horas vas a utilizar la lavadora?: "));
+                        let totalP = horaP * this.lavadora_pequeña;
+                        let valorP = totalP * this.cantidad_lavadoras;
+                        alert("El costo de la pequeña es: " + valorP);
+                    }
+                }
+            }
+        }
+
+        let pedir_datos_lavadora = new lavadoras(prompt("Elige: 1- lavadora pequeña. 2- lavadora grande."), parseInt(prompt("Cuantas lavadoras vas a alquilar.")));
+        pedir_datos_lavadora.calcular_lavadoras();
+    </script>
+</body>
+</html>

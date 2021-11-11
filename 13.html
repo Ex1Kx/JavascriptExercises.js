@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class disco{
+            constructor(pitido3, disco3){
+                this.pitido3 = pitido3;
+                this.disco3 = disco3;
+                this.pitido = "si";
+                this.pitido1 = "no";
+                this.disco = "si";
+                this.disco1 = "no";
+            }
+
+            calcula_disco(){
+                if(this.pitido3 == this.pitido, this.disco3 == this.disco){
+                    alert("Póngase en contacto con el técnico apoyo");
+                }
+                else if(this.pitido3 == this.pitido, this.disco3 == this.disco1){
+                    alert("Verificar contactos de la unidad");
+                }
+                else if(this.pitido3 == this.pitido1, this.disco3 == this.disco1){
+                    alert("Traiga la computadora para repararla en la central");
+                }
+                else if(this.pitido3 == this.pitido1, this.disco3 == this.disco){
+                    alert("Compruebe las conexiones de altavoces");
+                }
+            }
+        }
+        
+        let objeto_pitido = new disco(prompt("Su Pc Hace Ruido"), (prompt("Su pc gira el disco")));
+        objeto_pitido.calcula_disco();
+        
+    </script>
+    
+</body>
+</html>

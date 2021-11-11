@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class pares_impares{
+            constructor(cantidad_numeros){
+                this.cantidad_numeros = cantidad_numeros;
+            }
+
+            numeros(){
+                for (let i = 0; i <= this.cantidad_numeros; i++) {
+                    let numeros = parseInt(prompt("Ingresa un numero."));
+                    let guardar_numero = numeros;
+                    if (this.cantidad_numeros > 0) {
+                        if (guardar_numero % 2 == 0) {
+                            alert(guardar_numero + " El numero es par");
+                        } else{
+                            alert(guardar_numero + " El numero es impar.");
+                        }
+                    }
+                    const array = [guardar_numero];   
+                    if (array == guardar_numero) {
+                        array.forEach(function(element) {
+                            alert("elementos: "+ array);
+                        });
+                    }
+                    if(array > 0) {
+                        alert("cantidad de numero positivos " + array);
+                    } else {
+                        alert("Cantidad de numeros negativos " + array);
+                    }
+                }
+            }
+        }
+
+        let objeto_numero = new pares_impares(parseInt(prompt("Ingresa cantidad de numero.")));
+        objeto_numero.numeros();
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class modelo_auto{
+            constructor(auto){
+                this.auto = auto;
+                this.a = 119;
+                this.b = 179;
+                this.c = 189;
+                this.d = 195;
+                this.e = 221;
+                this.f = 780;
+            }
+
+            calcular_auto(){
+                if(this.auto == this.a){
+                    alert("el automóvil esta defectuoso, llevar agarantía");
+                }
+                else if(this.auto == this.b){
+                    alert("el automóvil esta defectuoso, llevar agarantía");
+                }
+                else if(this.auto == this.c){
+                    alert("el automóvil esta defectuoso, llevar agarantía");
+                }
+                else if(this.auto == this.d){
+                    alert("el automóvil esta defectuoso, llevar agarantía");
+                }
+                else if(this.auto == this.e){
+                    alert("el automóvil esta defectuoso, llevar agarantía");
+                }
+                else if(this.auto == this.f){
+                    alert("el automóvil esta defectuoso, llevar agarantía");
+                }
+                else{
+                    alert("Su automóvil no está defectuoso")
+                }
+            }
+        }
+        
+        let objeto_auto = new modelo_auto(prompt("Ingrese El Modelo De Su Auto"));
+        objeto_auto.calcular_auto();
+        
+    </script>
+    
+</body>
+</html>

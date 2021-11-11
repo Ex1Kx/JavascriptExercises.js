@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class saldo_mensual{
+            constructor(operador, saldo_llamada){
+                this.operador = operador;
+                this.saldo_llamada = saldo_llamada;
+                this.cargof1 = 45000;
+                this.cargos1 = 200;
+                this.cargof2 = 30000;
+                this.cargos2 = 100;
+                this.cargof3 = 40000;
+                this.cargos3= 250;
+            }
+
+            calcular_saldo_mensual(){
+                if (this.operador == 'tigo') {
+                    let total = this.saldo_llamada * this.cargos1;
+                    let total2 = total + this.cargof1;
+                    alert("El valor a pagar es de: "+ total2);
+                }
+                else if (this.operador == 'claro') {
+                    let total3 = this.saldo_llamada * this.cargos2;
+                    let total4 = total3 + this.cargof2;
+                    alert("El valor a pagar es de: "+ total4);
+                }
+                else if (this.operador == 'movistar') {
+                        let total5 = this.saldo_llamada * this.cargos3;
+                        let total6 = total5 + this.cargof3;
+                        alert("El valor a pagar es de: "+ total6);
+                }
+            }
+        }
+
+        let operador_llamada = new saldo_mensual(prompt("ingresa tu operador."), parseInt(prompt("Ingrese los minutos consumidos: ")));
+        operador_llamada.calcular_saldo_mensual();
+    </script>
+</body>
+</html>

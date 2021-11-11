@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class saldo_mensual{
+            constructor(genero, edad){
+                this.genero = genero;
+                this.edad = edad;
+                this.apoyo_1 = 120000;
+                this.apoyo2 = 100000;
+                this.apoyo3 = 1000000;
+            }
+
+            calcular_saldo_mensual(){
+                if (this.genero == 'femenino' && this.edad >= 50 ) {
+                    alert("Vas a recibir un apoyo de: " + this.apoyo_1 + "Con una bonificacion adicional del 30%");
+                } else if (this.genero == 'femenino' && this.edad >= 30 && this.edad < 50 ) {
+                    alert("Vas a recibir un apoyo de : " + this.apoyo2);
+                } else if (this.genero == 'masculino') {
+                    let porentaje = 0.2;
+                    let total = this.apoyo3 + porentaje;
+                    alert("Vas a recibir un apoyo de: "+ total);
+                } else if (this.genero == 'femenino' && this.edad < 30)  {
+                    alert("lo siento, pero tu no recibes un apoyo solidario ");
+                }
+            }
+        }
+
+        let objeto_mensual = new saldo_mensual(prompt("ingresa tu genero."), parseInt(prompt("ingresa tu edad.")));
+        objeto_mensual.calcular_saldo_mensual();
+    </script>
+</body>
+</html>

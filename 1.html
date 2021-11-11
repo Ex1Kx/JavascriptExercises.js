@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class salario{
+            constructor(nombre, horas){
+                this.nombre = nombre;
+                this.horas = horas;
+                this.salario1 = 18000 * 10;
+                this.salario2 = 20000 * 20;
+                this.salario3 = 25000 * 40;
+            }
+
+            mostrar_mensaje(){
+                switch(this.horas){
+                    case "10":
+                        alert(`Señor ${this.nombre} el numero de horas es ${this.horas} y su salario equivale a ${this.salario1}$`);
+                    break;
+        
+                    case "20":
+                        alert(`Señor ${this.nombre} el numero de horas es ${this.horas} y su salario equivale a ${this.salario2}$`);
+                    break;
+        
+                    case "40":
+                        alert(`Señor ${this.nombre} el numero de horas es ${this.horas} y su salario equivale a ${this.salario3}$`);
+                    break;
+        
+                    default:
+                        alert("Ingrese un valor valido.");
+                    break;
+                }
+            }
+        }
+
+        let pedir_datos = new salario(prompt("Ingrese su nombre."), prompt("Por cuantas horas vas a trabajar, escoja entre: 10, 20, 40"));
+        pedir_datos.mostrar_mensaje();
+    </script>
+</body>
+</html>

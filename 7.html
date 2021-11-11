@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class mayor_menor{
+            constructor(numero1, numero2, numero3){
+                this.numero1 = numero1;
+                this.numero2 = numero2;
+                this.numero3 = numero3;
+            }
+
+            numeros(){
+                if (this.numero1 > this.numero2) {
+                    if (this.numero1 > this.numero3) {
+                        alert("El numero " + this.numero1 + " es el Mayor");
+                    } else {
+                        alert("El numero " + this.numero3 + " es el Mayor");
+                    }
+                } else if (this.numero2 > this.numero3) {
+                    alert("El numero " + this.numero2 + " es el Mayor");
+                } else {
+                    alert("El numero " + this.numero3 + " es el Mayor");
+                }
+            }
+        }
+
+        let objeto_numeros = new mayor_menor(parseInt(prompt("Numero 1.")), parseInt(prompt("Numero 2.")), parseInt(prompt("Numero 3.")));
+        objeto_numeros.numeros();
+    </script>
+</body>
+</html>

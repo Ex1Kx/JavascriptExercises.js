@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Sandiwch{
+            constructor(order){
+                this.order = order;
+                this.t1 = 3000;
+                this.t2 = 4000;
+                this.lece = 300;
+                this.tom = 200;
+                this.que = 500;
+            }
+
+            calcular_sandwich(){
+                if (this.order == "grande"){
+                    let ad = (prompt("¿Cuanta Lechuga Y Cebolla Desearia Adicionar?"));
+                    let ad2 = (prompt("¿Cuanto Tomate Desea Adicionar?"));
+                    let ad3 = (prompt("¿Cuanto Queso Desea Adicionar?"));
+                    let total = this.t1 + ad * this.lece + ad2 * this.tom + ad3 *this.que;
+                    alert("El Total Del Sandwich Es De: "+ total);     
+                } 
+                else if (this.order == "pequeño"){
+                    let ad = (prompt("¿Cuanta Lechuga Y Cebolla Desearia Adicionar?"));
+                    let ad2 = (prompt("¿Cuanto Tomate Desea Adicionar?"));
+                    let ad3 = (prompt("¿Cuanto Queso Desea Adicionar?"));
+                    let total = this.t2 + ad * this.lece + ad2 * this.tom + ad3 *this.que;
+                    alert("El Total Del Sandwich Es De: "+ total);     
+                } 
+            }
+        }
+
+        let objeto_order = new Sandiwch(prompt("¿Desea Llevar Un Sandiwch Grande O Pequeño?"));
+        objeto_order.calcular_sandwich();
+        
+    </script>
+</body>
+</html>

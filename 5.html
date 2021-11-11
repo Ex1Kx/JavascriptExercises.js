@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class cajero{
+            constructor(opcion){
+                this.opcion = opcion;
+                this.array = 20000;
+            }
+
+            cajeroAutomatico(){
+                alert("La opcion elegida fue: " + this.opcion)
+                if (this.opcion == "1") {
+                    let cantidadRetiro = parseInt(prompt("Cuanto dinero desea retirar?"));
+                    
+                    if(cantidadRetiro < 20000) {
+                        alert("Lo siento, pero no puedes hacer retiros inferiores de este saldo" + this.array);
+                    } else if (cantidadRetiro > 20000) {
+                        let retiro = this.array - cantidadRetiro;
+                        alert("Si saldo es de: " + this.array + ", Puesto que usted retiro " + retiro);
+                    }
+                
+                } else if (this.opcion == "2") {
+                    let cantidadConsigna = parseInt(prompt("cuanto dinero dese consignar?"));
+                    let consignar = (cantidadConsigna) + this.array;
+                    alert("La consigan fue de: " + cantidadConsigna + " , asi que su saldo es de: " + consignar);
+                }
+            }
+        }
+
+        let objeto_cajero = new cajero(prompt("Elije: 1- Retiros. 2- Consoiganciones."));
+        objeto_cajero.cajeroAutomatico();
+    </script>
+</body>
+</html>

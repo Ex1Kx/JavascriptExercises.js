@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Velocidad_viento{
+            constructor(wind){
+                this.wind = wind;
+                this.bool = true;
+                this.bool2 = false;
+            }
+
+            mostrar_velocidad(){
+                if(this.wind <= 153){
+                    alert("La Velocidad Del Viento Esta Ubicada En La Categoria 1");
+                }
+                else if(this.wind <=177){
+                    alert("La Velocidad Del Viento Esta Ubicada En La Categoria 2");
+                }
+                else if(this.wind <=209){
+                    alert("La Velocidad Del Viento Esta Ubicada En La Categoria 3");
+                }
+                else if(this.wind <=248){
+                    alert("La Velocidad Del Viento Esta Ubicada En La Categoria 4");
+                }
+                else if(this.wind <=249){
+                    alert("La Velocidad Del Viento Esta Ubicada Entre La Categoria 4 Y 5");
+                }
+                else if(this.wind >249){
+                    alert("Su Categoria Aun No Esta Definida");
+                }
+            }
+        }
+
+        let objeto_wind = new Velocidad_viento(parseInt(prompt("Ingrese La Velocidad Del Viento En Km/h: ")));
+        objeto_wind.mostrar_velocidad();
+    </script>
+    
+</body>
+</html>

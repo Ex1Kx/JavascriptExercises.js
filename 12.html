@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class copias{
+            constructor(copia){
+                this.copia = copia;
+                this.imp1 = 120;
+                this.imp2 = 100;
+                this.imp3 = 80;
+                this.imp4 = 50;
+            }
+
+            calcular_copias(){
+                if(this.copia <= 499){
+                    let ci1 = (this.copia * this.imp1);
+                    alert("El Precio De La Copia Es De $120");
+                    alert("El Precio A Pagar Es De: "+ ci1);
+                }
+                else if(this.copia <= 749){
+                    let ci2 = (this.copia * this.imp2);
+                    alert("El Precio De La Copia Es De $100");
+                    alert("El Precio A Pagar Es De: "+ ci2);
+                }
+                else if(this.copia <= 999){
+                    let ci3 = (this.copia * this.imp3);
+                    alert("El Precio De La Copia Es De $80");
+                    alert("El Precio A Pagar Es De: "+ci3);
+                }
+                else if(this.copia >= 1000){
+                    let ci4 = (this.copia * this.imp4);
+                    alert("El Precio De La Copia Es De $50");
+                    alert("El Precio A Pagar Es De: "+ci4);
+                }
+            }
+        }
+        
+        let objeto_copia = new copias(parseInt(prompt("Ingrese La Cantidad De Copias A Sacar: ")));
+        objeto_copia.calcular_copias();
+        
+    </script>
+    
+</body>
+</html>
